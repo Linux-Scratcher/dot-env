@@ -1,2 +1,2 @@
 # dot-env
-My linux config.
+Configuration pur utiliser pacman sur SteamOS
