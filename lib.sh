@@ -12,15 +12,13 @@ link_config_files() {
         mv "$target"{,.back}
     fi
 
-
-
     #source and target are files and target is not symlink
     #backup target file
-   
+
     if [[ -f "$source" && -f "$target" && ! -L "$target" ]]; then
-               echo "${target} is a regualar file."
-               mv "$target"{,.back}
-  fi
+        echo "${target} is a regualar file."
+        mv "$target"{,.back}
+    fi
 
     #target is a symlink but is not link to the source
     #unlink target
