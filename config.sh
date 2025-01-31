@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source lib.sh
+source ./lib.sh
 
 if [[ "$(sudo steamos-readonly status)" == "enabled" ]]; then
 # Faire fonctionner pacman sur votre machine Steam :
@@ -15,4 +15,4 @@ if [[ "$(sudo steamos-readonly status)" == "enabled" ]]; then
 fi
 
 
-link_config_files "$PWD"/pouet "$HOME"/pouet
+link_config_files "$PWD"/.zshrc "$HOME"/.zshrc

@@ -70,7 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,16 +110,15 @@ source $ZSH/oh-my-zsh.sh
 alias java='flatpak run org.adoptium.Temurin.17'
 alias nvim='flatpak run io.neovim.nvim'
 alias ll="ls -al"
+alias myip="curl http://ipecho.net/plain; echo"
 
 # fnm
 FNM_PATH="/home/deck/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-echo "fnm folder exists"
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
 DENO_PATH="/home/deck/.deno"
 if [ -d "$DENO_PATH" ]; then
-echo "Deno folder exists"
     export PATH="/home/deck/.deno/bin:$PATH"
 fi
